@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('mhs/', views.showmhs,name='showmhs'), 
     path('save-mhs/', views.savemhs,name='savemhs'), 
+    path('delete-mhs/', views.delete,name='delete'), 
 ]
