@@ -25,5 +25,8 @@ urlpatterns = [
     path('mhs/', views.showmhs, name='showmhs'),
     path('save-mhs/', views.savemhs, name='savemhs'),
     path('delete-mhs/', views.delete, name='delete'),
-
+    
+    path('jurusan/', views.showjurusan, name='showjurusan'),
+    path('tambahjurusan/', views.savejurusan, name='simpanjurusan'),
+    
 ]
