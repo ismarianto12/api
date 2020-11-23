@@ -7,6 +7,7 @@ from api.serialization import SerializationClass
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
+from django.shortcuts import render
 
 
 
@@ -34,3 +35,14 @@ def delete(request):
     data.objects.all().delete()
     return JsonResponse({'message':'data berhasil di hapus.'},status=status.HTTP_200_OK)
  
+def halaman_depan(request): 
+    context = {'foo': 'bar',
+               'mhs': mhs.objects.all()
+               }
+    return render(request, 'home.html', context) 
+
+
+def handler404(request):
+    return render(request, '404.html', status=404)
+ 
+     
